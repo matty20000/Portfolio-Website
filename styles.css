@@ -1,1 +1,94 @@
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
+:root {
+  --spearmint: #3fe0b6;
+  --bg: #f9f9f9;
+  --text: #222;
+  --heading: #222;
+  --card-bg: #fff;
+  --card-shadow: 0 4px 20px rgba(63, 224, 182, 0.09);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+header {
+  background: var(--spearmint);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Poppins', Arial, sans-serif;
+  color: var(--heading);
+  margin-bottom: 1rem;
+}
+
+section {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+  border-radius: 14px;
+  padding: 2rem 2.5rem;
+}
+
+a {
+  color: var(--spearmint);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #2abf97;
+}
+
+button, .btn {
+  font-family: inherit;
+  background: var(--spearmint);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(63,224,182,0.15);
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+button:hover, .btn:hover {
+  background: #2abf97;
+  box-shadow: 0 4px 16px rgba(63,224,182,0.25);
+}
+
+input, textarea {
+  font-family: inherit;
+  border: 2px solid var(--spearmint);
+  border-radius: 6px;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--spearmint);
+  border-radius: 8px;
+}

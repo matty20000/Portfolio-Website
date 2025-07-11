@@ -1,9 +1,3 @@
 # Portfolio-Website
 
-Portfolio-Website/
-│
-├── index.html        # Main HTML file
-├── styles.css        # CSS file for styling
-├── images/           # Folder for images (optional)
-├── scripts.js        # JavaScript file (optional)
-└── README.md         # Project description
+Learning how to build a website with GitHub while making a portfolio and project planning site

@@ -30,7 +30,7 @@ header {
 }
 
 h1, h2, h3, h4 {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Oswald', Arial, sans-serif;
   color: var(--heading);
   margin-bottom: 1rem;
 }

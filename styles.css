@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --spearmint: #47a256;
-  --bg: #848884;
+  --spearmint: #006400; /* deep green */
+  --bg: #708070; /* smoke gray */
   --text: #222;
   --heading: #222;
   --card-bg: #fff;
@@ -26,7 +26,8 @@ header {
   background: var(--spearmint);
   color: #fff;
   padding: 2rem 0;
-  text-align: center;
+  text-align: right; /* align title to the right */
+  padding-right: 2rem;
 }
 
 h1, h2, h3, h4 {
@@ -92,4 +93,5 @@ input, textarea {
   background: var(--spearmint);
   border-radius: 8px;
 }
+
 

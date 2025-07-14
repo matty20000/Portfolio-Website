@@ -69,7 +69,6 @@ button, .btn {
   box-shadow: 0 2px 8px rgba(63,224,182,0.15);
   transition: background 0.2s, box-shadow 0.2s;
 }
-
 button:hover, .btn:hover {
   background: #2abf97;
   box-shadow: 0 4px 16px rgba(63,224,182,0.25);

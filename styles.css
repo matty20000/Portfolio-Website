@@ -28,6 +28,37 @@ header {
   padding: 2rem 0;
   text-align: left; /* align title to the right */
   padding-right: 2rem;
+
+  .side-menu {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden by default */
+    width: 250px;
+    height: 100%;
+    background: var(--spearmint);
+    color: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
+    transition: right 0.3s;
+    padding-top: 60px;
+    z-index: 2000;
+  }
+  .side-menu.active {
+    right: 0; /* Show menu */
+  }
+  .side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .side-menu ul li {
+    padding: 16px;
+    border-bottom: 1px solid #2abf97;
+  }
+  .side-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
 }
 
 h1, h2, h3, h4 {

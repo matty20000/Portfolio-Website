@@ -26,7 +26,7 @@ header {
   background: var(--spearmint);
   color: #fff;
   padding: 2rem 0;
-  text-align: right; /* align title to the right */
+  text-align: left; /* align title to the right */
   padding-right: 2rem;
 }
 

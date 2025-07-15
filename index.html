@@ -4,82 +4,9 @@
   <meta charset="UTF-8">
   <title>My Portfolio</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
-
-    :root {
-    --background: #F5F5F7;
-    --primary: #0A2540;
-    --secondary: #B3C7E6;
-    --text: #22272A;
-    --cta: #FF6F61;
-  }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Courier New', monospace;
-      background: var(--background);
-      color: var(--text);
-      margin: 0;
-      line-height: 1.6;
-
-      <button id="menu-btn" class="btn" style="position:fixed; top:20px; right:20px; z-index:2100;">Menu</button>
-
-      <div id="side-menu" class="side-menu">
-        <ul>
-          <li><a href="#">Section 1</a></li>
-          <li><a href="#">Section 2</a></li>
-          <li><a href="#">Section 3</a></li>
-        </ul>
-</div>
-    }
-
-    header {
-      background: var(--spearmint);
-      color: #fff;
-      padding: 2rem 0;
-      text-align: left; /* left-align title */
-      padding-right: 2rem;
-    }
-
-    h1, h2, h3, h4 {
-      font-family: Courier New', monospace;
-      color: var(--heading);
-      margin-bottom: 1rem;
-    }
-
-    section {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: var(--card-bg);
-      box-shadow: var(--card-shadow);
-      border-radius: 0; /* sharp corners */
-      padding: 2rem 2.5rem;
-    }
-
-    #skills ul {
-      padding-left: 1.5rem;
-      list-style-type: disc;
-    }
-
-    #skills li {
-      margin-bottom: 0.5rem;
-      font-weight: 500;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1rem;
-      color: #fff;
-      background: var(--spearmint);
-    }
-  </style>
+  <!-- Remove inline style block to avoid duplicate/conflicting CSS -->
 </head>
 <body>
-
 
   <button id="menu-btn" class="btn" style="position:fixed; top:20px; right:20px; z-index:2100;">Menu</button>
 
@@ -92,13 +19,13 @@
   </div>
   
   <header>
-  <img src="images/Header.jpg" alt="Header Image" style="height:80px;">
-  <h1>   Matthew Smalley</h1>
+    <img src="images/Header.jpg" alt="Header Image" style="height:80px;">
+    <h1>Matthew Smalley</h1>
   </header>
 
   <main>
     <section>
-      <p>My Portfolio and Resume as an Mechanical Engineer</p>
+      <p>My Portfolio and Resume as a Mechanical Engineer</p>
     </section>
 
     <section id="skills">
@@ -114,11 +41,12 @@
 
     <section id="projects">
       <h2>Projects</h2>
-        <ul>
-          <li>Selective Solder Machine Carrier</li>
-          <li>Modeling for an alternative power source</li>
-          <li>Senior Design Project</li>
-        </ul>
+      <ul>
+        <li>Selective Solder Machine Carrier</li>
+        <li>Modeling for an alternative power source</li>
+        <li>Senior Design Project</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
@@ -131,22 +59,17 @@
 
     menuBtn.addEventListener('click', () => {
       sideMenu.classList.toggle('active');
-  });
+    });
 
-  // Optional: Click outside to close the menu
-  window.addEventListener('click', (e) => {
-    if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-      sideMenu.classList.remove('active');
-    }
-  });
-</script>
-  
+    // Optional: Click outside to close the menu
+    window.addEventListener('click', (e) => {
+      if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+        sideMenu.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
-
-
-  <footer>
-    <p>&copy; 2025 Matthew Smalley</p>
   </footer>
 </body>
 </html>

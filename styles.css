@@ -1,11 +1,11 @@
-/* Import Poppins font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --spearmint: #F5F5F7; /* PALE BLUE */
-  --bg: #708070; /* smoke gray */
-  --text: #222;
-  --heading: #222;
+  --background: #F5F5F7;
+  --primary: #0A2540;
+  --secondary: #B3C7E6;
+  --text: #22272A;
+  --cta: #FF6F61;
   --card-bg: #fff;
   --card-shadow: 0 4px 20px rgba(63, 224, 182, 0.09);
 }
@@ -15,55 +15,24 @@
 }
 
 body {
-  font-family: Courier New', monospace;
-  background: var(--bg);
+  font-family: 'Courier New', monospace;
+  background: var(--background);
   color: var(--text);
   margin: 0;
   line-height: 1.6;
 }
 
 header {
-  background: var(--spearmint);
+  background: var(--primary);
   color: #fff;
   padding: 2rem 0;
-  text-align: left; /* align title to the right */
+  text-align: left;
   padding-right: 2rem;
-
-  .side-menu {
-    position: fixed;
-    top: 0;
-    right: -250px; /* Hidden by default */
-    width: 250px;
-    height: 100%;
-    background: var(--spearmint);
-    color: #fff;
-    box-shadow: -2px 0 8px rgba(0,0,0,0.2);
-    transition: right 0.3s;
-    padding-top: 60px;
-    z-index: 2000;
-  }
-  .side-menu.active {
-    right: 0; /* Show menu */
-  }
-  .side-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  .side-menu ul li {
-    padding: 16px;
-    border-bottom: 1px solid #2abf97;
-  }
-  .side-menu ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.1rem;
-  }
 }
 
 h1, h2, h3, h4 {
-  font-family: Courier New', monospace;
-  color: var(--heading);
+  font-family: 'Courier New', monospace;
+  color: var(--primary);
   margin-bottom: 1rem;
 }
 
@@ -72,24 +41,30 @@ section {
   margin: 2rem auto;
   background: var(--card-bg);
   box-shadow: var(--card-shadow);
-  border-radius: 14px;
+  border-radius: 0;
   padding: 2rem 2.5rem;
 }
 
-a {
-  color: var(--spearmint);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s;
+#skills ul {
+  padding-left: 1.5rem;
+  list-style-type: disc;
 }
 
-a:hover {
-  color: #2abf97;
+#skills li {
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  background: var(--primary);
 }
 
 button, .btn {
   font-family: inherit;
-  background: var(--spearmint);
+  background: var(--cta);
   color: #fff;
   border: none;
   border-radius: 8px;
@@ -100,37 +75,19 @@ button, .btn {
   box-shadow: 0 2px 8px rgba(63,224,182,0.15);
   transition: background 0.2s, box-shadow 0.2s;
 }
+
 button:hover, .btn:hover {
-  background: #2abf97;
+  background: var(--primary);
   box-shadow: 0 4px 16px rgba(63,224,182,0.25);
-}
-
-input, textarea {
-  font-family: inherit;
-  border: 2px solid var(--spearmint);
-  border-radius: 6px;
-  padding: 0.5rem;
-  width: 100%;
-  margin-bottom: 1rem;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-  background: var(--bg);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--spearmint);
-  border-radius: 8px;
 }
 
 .side-menu {
   position: fixed;
   top: 0;
-  right: -250px; /* Hidden by default */
+  right: -250px;
   width: 250px;
   height: 100%;
-  background: var(--spearmint);
+  background: var(--primary);
   color: #fff;
   box-shadow: -2px 0 8px rgba(0,0,0,0.2);
   transition: right 0.3s;
@@ -138,7 +95,7 @@ input, textarea {
   z-index: 2000;
 }
 .side-menu.active {
-  right: 0; /* Show menu */
+  right: 0;
 }
 .side-menu ul {
   list-style: none;
@@ -147,7 +104,7 @@ input, textarea {
 }
 .side-menu ul li {
   padding: 16px;
-  border-bottom: 1px solid #2abf97;
+  border-bottom: 1px solid #B3C7E6;
 }
 .side-menu ul li a {
   color: #fff;

@@ -19,6 +19,17 @@ if (menuToggle && nav) {
     nav.classList.toggle('open');
   });
 }
+// Pop up tab
+function openModal(skillName) {
+  document.getElementById('modalTitle').textContent = skillName;
+  // You can show different content based on skillName if you want...
+  document.getElementById('modalContent').textContent = "Information about " + skillName;
+  document.getElementById('skillModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('skillModal').style.display = "none";
+}
 
 // Scroll-to-top button (assumes an element with id 'scrollTopBtn')
 const scrollTopBtn = document.getElementById('scrollTopBtn');

@@ -12,11 +12,13 @@
   <button id="menu-btn" class="btn" style="position:fixed; top:20px; right:20px; z-index:2100;">Menu</button>
 
   <div id="side-menu" class="side-menu">
-    <ul>
-      <li><a href="#">Section 1</a></li>
-      <li><a href="#">Section 2</a></li>
-      <li><a href="#">Section 3</a></li>
-    </ul>
+  <ul>
+    <li onclick="openModal('SolidWorks')">SolidWorks</li>
+    <li onclick="openModal('AutoCAD')">AutoCAD</li>
+    <li onclick="openModal('MATLAB')">MATLAB</li>
+    <li onclick="openModal('Product Design')">Product Design</li>
+    <li onclick="openModal('Product Manufacturing')">Product Manufacturing</li>
+  </ul>
   </div>
   
   <header>
@@ -67,6 +69,15 @@
       if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
         sideMenu.classList.remove('active');
       }
+
+    <div id="skillModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:2200;">
+      <div style="background:#fff; margin:15% auto; padding:20px; width:300px; position:relative;">
+        <span onclick="closeModal()" style="position:absolute; top:10px; right:15px; font-size:24px; cursor:pointer;">&times;</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalContent">Skill details will go here.</p>
+      </div>
+    </div>
+      
     });
   </script>
 </body>

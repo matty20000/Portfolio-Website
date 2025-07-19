@@ -41,7 +41,7 @@ h1 {
   font-family: 'Courier New', monospace;
   color: var(--primary);
   margin-bottom: 1rem;
-  text-decoration-thickness: 5px; 
+  text-decoration-thickness: 10px; 
 }
 
 h2, h3, h4 {

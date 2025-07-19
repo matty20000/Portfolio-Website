@@ -23,12 +23,19 @@ body {
 }
 
 header {
-  background: var(--primary);
+  background-image: url('Header.1.png');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
-  padding: 2rem 0;
-  text-align: left;
-  padding-right: 5rem;
+  text-align: center;
+  position: relative;
+  padding: 0; 
 }
+
 
 h1 {
   font-family: 'Courier New', monospace;

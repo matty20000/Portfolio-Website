@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
-
+//adding a comment
 // Mobile menu toggle (assumes an element with id 'menu-toggle' and a nav with class 'nav')
 const menuToggle = document.getElementById('menu-toggle');
 const nav = document.querySelector('.nav');

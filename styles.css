@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
 :root {
-  --background: #A9A9A9;  /* Dark Grey */
-  --primary: #0A2540;     /* DARK BLUE/NAVY */
-  --secondary: #B3C7E6;
-  --text: #22272A;        /* PALE BLUE  */
-  --cta: #FF6F61;         /* PASTEL RED */
-  --card-bg: #000080;        /* Navy Blue */
-  --card-shadow: 0 4px 20px rgba(63, 224, 182, 0.09);
+  --background: #181a1b;      /* Very dark gray */
+  --primary: #22272a;         /* Dark blue-gray */
+  --secondary: #32383e;       /* Slightly lighter gray */
+  --text: #f4f4f4;            /* Near-white for text */
+  --cta: #e95454;             /* Muted red for calls-to-action */
+  --card-bg: #23272f;         /* Dark card background */
+  --card-shadow: 0 4px 20px rgba(0,0,0,0.35); /* Stronger shadow for dark */
 }
 
 * {

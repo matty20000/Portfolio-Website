@@ -20,12 +20,21 @@ if (menuToggle && nav) {
   });
 }
 // Pop up tab
+const skillDetails = {
+  "SolidWorks": "Sheet-metal/General Modeling, Motion Studies, Kinematic graphs",
+  "AutoCAD": "General Modeling",
+  "MATLAB": "ermmmm what the sigma",
+  "Soldering": "Hand soldering, Soldering Paste, PCB ovens, Trouble shooting",
+  "Product-Design": "Designing Parts directly for in-house manufacting"
+};
+
+// Update this function
 function openModal(skillName) {
   document.getElementById('modalTitle').textContent = skillName;
-  // You can show different content based on skillName if you want...
-  document.getElementById('modalContent').textContent = "Information about " + skillName;
+  document.getElementById('modalContent').textContent = skillDetails[skillName] || "Information about " + skillName;
   document.getElementById('skillModal').style.display = "block";
 }
+
 
 function closeModal() {
   document.getElementById('skillModal').style.display = "none";

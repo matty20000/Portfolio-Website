@@ -1,54 +1,73 @@
-// scripts.js
+const menuBtn = document.getElementById('menu-btn');
+const navLinks = document.getElementById('side-menu');
+const skillModal = document.getElementById('skillModal');
 
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+if (menuBtn && navLinks) {
+  menuBtn.addEventListener('click', (event) => {
+    event.stopPropagation();
+    const isOpen = navLinks.classList.toggle('active');
+    menuBtn.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  window.addEventListener('click', (event) => {
+    if (!navLinks.contains(event.target) && !menuBtn.contains(event.target)) {
+      navLinks.classList.remove('active');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+  anchor.addEventListener('click', function onClick(event) {
     const target = document.querySelector(this.getAttribute('href'));
     if (target) {
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth' });
+      event.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      navLinks?.classList.remove('active');
+      menuBtn?.setAttribute('aria-expanded', 'false');
     }
   });
 });
-//adding a comment
-// Mobile menu toggle (assumes an element with id 'menu-toggle' and a nav with class 'nav')
-const menuToggle = document.getElementById('menu-toggle');
-const nav = document.querySelector('.nav');
-if (menuToggle && nav) {
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-  });
-}
-// Pop up tab
+
 const skillDetails = {
-  "SolidWorks": "Sheet-metal/General Modeling, Motion Studies, Kinematic graphs",
-  "AutoCAD": "General Modeling",
-  "MATLAB": "ermmmm what the sigma",
-  "Soldering": "Hand soldering, Soldering Paste, PCB ovens, Trouble shooting",
-  "Product-Design": "Designing Parts directly for in-house manufacting"
+  SolidWorks: 'Sheet-metal and general modeling, motion studies, and kinematic graph analysis.',
+  AutoCAD: '2D drafting and mechanical layouts for production-ready documentation.',
+  MATLAB: 'Data analysis, script-based automation, and engineering-focused calculations.',
+  Soldering: 'Hand soldering, solder paste application, PCB oven workflows, and troubleshooting.',
+  'Product-Design': 'Part design for in-house manufacturing with practical cost and process awareness.'
 };
 
-// Update this function
 function openModal(skillName) {
-  document.getElementById('modalTitle').textContent = skillName;
-  document.getElementById('modalContent').textContent = skillDetails[skillName] || "Information about " + skillName;
-  document.getElementById('skillModal').style.display = "block";
-}
+  const modalTitle = document.getElementById('modalTitle');
+  const modalContent = document.getElementById('modalContent');
 
+  if (!modalTitle || !modalContent || !skillModal) return;
+
+  modalTitle.textContent = skillName;
+  modalContent.textContent = skillDetails[skillName] || `Information about ${skillName}.`;
+
+  skillModal.classList.add('open');
+  skillModal.setAttribute('aria-hidden', 'false');
+}
 
 function closeModal() {
-  document.getElementById('skillModal').style.display = "none";
+  if (!skillModal) return;
+
+  skillModal.classList.remove('open');
+  skillModal.setAttribute('aria-hidden', 'true');
 }
 
-// Scroll-to-top button (assumes an element with id 'scrollTopBtn')
-const scrollTopBtn = document.getElementById('scrollTopBtn');
-window.addEventListener('scroll', () => {
-  if (scrollTopBtn) {
-    scrollTopBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+skillModal?.addEventListener('click', (event) => {
+  if (event.target === skillModal) {
+    closeModal();
   }
 });
-if (scrollTopBtn) {
-  scrollTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+
+window.addEventListener('keydown', (event) => {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
 });
+
+window.openModal = openModal;
+window.closeModal = closeModal;

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matthew's Portfolio</title>
+  <title>Matthew Smalley | Mechanical Engineering Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
       <button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="side-menu">Menu</button>
       <ul id="side-menu" class="nav-links">
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#resume">Resume</a></li>
@@ -23,54 +24,120 @@
     </nav>
 
     <div class="hero-content">
-      <p class="eyebrow">Mechanical Engineer</p>
+      <p class="eyebrow">Engineering Career Applicant</p>
       <h1>Hello, I'm Matthew.</h1>
-      <p class="lead">I design and optimize mechanical systems with a focus on manufacturability, product quality, and practical execution.</p>
-      <a class="btn" href="#projects">View My Work</a>
+      <p class="lead">I apply CAD, 3D printing, SAP/Windchill review, and systematic process improvement to solve real-world aerospace, PCB assembly, and manufacturing challenges.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#projects">View My Work</a>
+        <a class="btn btn-secondary" href="Resume_Matthew_Smalley%20(Website).pdf" target="_blank" rel="noopener">View Resume</a>
+      </div>
     </div>
   </header>
 
   <main>
-    <section id="about" class="card">
-      <h2>My Journey</h2>
-      <p>
-        I’m a mechanical engineering student with hands-on experience in product development, process improvement, and manufacturing support.
-        I enjoy turning concepts into production-ready solutions through practical design, rapid problem solving, and cross-functional collaboration.
-      </p>
+    <section id="about" class="card intro-card">
+      <div>
+        <h2>My Journey</h2>
+        <p>
+          I’m a Northern Illinois University mechanical engineering student in a 4-of-5-year master’s program with a 3.85 GPA, Dean’s List recognition, and engineering internships at Woodward Inc. and Richardson Electronics. I’m motivated and adaptable, with experience developing cost-effective solutions for real-world situations.
+        </p>
+      </div>
+      <ul class="stat-list" aria-label="Resume highlights">
+        <li><strong>3.85</strong><span>GPA</span></li>
+        <li><strong>4/5</strong><span>Year in master’s program</span></li>
+        <li><strong>2026</strong><span>Aerospace operations engineering internship</span></li>
+      </ul>
+    </section>
+
+    <section id="experience" class="card">
+      <h2>Experience Highlights</h2>
+      <div class="timeline">
+        <article>
+          <p class="timeline-date">May 2026 – August 2026</p>
+          <h3>Aerospace Operations Engineering Intern · Woodward Inc.</h3>
+          <ul class="experience-bullets">
+            <li>Optimized PCB surface mount technology processes.</li>
+            <li>Applied Creo and 3D printing for SMT machine fixtures.</li>
+            <li>Managed engineering reviews in SAP and Windchill.</li>
+            <li>Implemented support solutions for military flight control systems and actuation systems.</li>
+            <li>Led internal constraint-reduction projects and reviewed drawings with GD&amp;T.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="timeline-date">May 2025 – August 2025</p>
+          <h3>Mechanical Engineering Intern · Richardson Electronics</h3>
+          <ul class="experience-bullets">
+            <li>Optimized circuit board layout design.</li>
+            <li>Designed SolidWorks fixtures that improved cycle-time efficiency.</li>
+            <li>Worked on lab-machine and process improvements.</li>
+            <li>Fixed critical stoppages in circuit board assembly.</li>
+            <li>Programmed select solder machines to improve quality while reducing scrap costs per cycle.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="timeline-date">August 2023 – Present</p>
+          <h3>Community Advisor & Desk Assistant · Northern Illinois Housing</h3>
+          <ul class="experience-bullets">
+            <li>Maintained a positive floor environment while addressing rising issues.</li>
+            <li>Communicated with students to settle housing concerns.</li>
+            <li>Worked with housing staff and law enforcement on dispute resolution.</li>
+          </ul>
+        </article>
+        <article>
+          <p class="timeline-date">April 2021 – August 2023</p>
+          <h3>Supervisor, Lifeguard & Instructor · Goldfish Swim School</h3>
+          <ul class="experience-bullets">
+            <li>Coordinated action items between management and teaching staff.</li>
+            <li>Led employee teams to improve safety protocols and lesson quality.</li>
+          </ul>
+        </article>
+      </div>
     </section>
 
     <section id="skills" class="card">
       <h2>Core Skills</h2>
+      <p>These skills are pulled from my updated resume and grouped around hands-on engineering tools, manufacturing improvements, and cross-functional leadership.</p>
       <ul class="grid-list">
-        <li><button class="chip" onclick="openModal('SolidWorks')">SolidWorks</button></li>
-        <li><button class="chip" onclick="openModal('AutoCAD')">AutoCAD</button></li>
-        <li><button class="chip" onclick="openModal('MATLAB')">MATLAB</button></li>
-        <li><button class="chip" onclick="openModal('Soldering')">Soldering</button></li>
-        <li><button class="chip" onclick="openModal('Product-Design')">Product Design</button></li>
+        <li><button class="chip" onclick="openModal('Creo-SolidWorks')">Creo/SolidWorks</button></li>
+        <li><button class="chip" onclick="openModal('SAP-Windchill')">SAP/Windchill</button></li>
+        <li><button class="chip" onclick="openModal('Printing')">3D Printing</button></li>
+        <li><button class="chip" onclick="openModal('GDT')">Reviewing GD&amp;T</button></li>
+        <li><button class="chip" onclick="openModal('Process-Issues')">Solving Process Issues</button></li>
+        <li><button class="chip" onclick="openModal('Cross-Functional')">Cross-Functional Communication</button></li>
+        <li><button class="chip" onclick="openModal('Engineering-Leadership')">Engineering Team Leadership</button></li>
       </ul>
+      <div class="traits">
+        <span>Responsible</span>
+        <span>Dependable</span>
+        <span>Creative</span>
+        <span>Motivated</span>
+        <span>Empathetic</span>
+        <span>Experienced</span>
+        <span>Teachable</span>
+      </div>
     </section>
 
     <section id="projects" class="card">
       <h2>Projects</h2>
       <ul class="project-list">
-        <li>Selective Solder Machine Carrier</li>
-        <li>Solar Panel Cleaner</li>
-        <li>Custom Modeling for Power Sources</li>
-        <li>Process Improvement and Programming for a PCB Lab</li>
-        <li>Simulating Dynamics of Curved Planes</li>
+        <li><strong>Bionic Hand:</strong> Built a mechanically focused design project that demonstrates practical concept development.</li>
+        <li><strong>Select Solder Carrier for Circuit Boards:</strong> Developed carrier support for repeatable circuit board soldering operations.</li>
+        <li><strong>Inverter Board Manufacturing Process:</strong> Improved manufacturing flow and quality considerations for board assembly.</li>
+        <li><strong>Reflow Oven PCB Fixture:</strong> Designed fixture support for PCB oven workflows.</li>
+        <li><strong>Layout Design for Circuit Board Assemblies:</strong> Optimized circuit board layout design for manufacturability and production support.</li>
       </ul>
     </section>
 
     <section id="resume" class="card">
       <h2>Resume</h2>
-      <p>Review my resume directly below, or download a copy.</p>
+      <p>Review my updated resume directly below, or open the uploaded PDF resume.</p>
       <div class="resume-actions">
-        <a href="Matthew%20Smalley%20Resume%20(Website).pdf" target="_blank" rel="noopener" class="btn">Download Resume (PDF)</a>
+        <a href="Resume_Matthew_Smalley%20(Website).pdf" target="_blank" rel="noopener" class="btn">View Updated Resume</a>
       </div>
       <div class="resume-frame-wrap">
         <iframe
           title="Matthew Smalley Resume"
-          src="Matthew%20Smalley%20Resume%20(1).pdf"
+          src="Resume_Matthew_Smalley%20(Website).pdf"
           loading="lazy"
         ></iframe>
       </div>

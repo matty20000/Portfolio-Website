@@ -206,6 +206,15 @@ h2 {
   margin: 0;
 }
 
+.experience-list {
+  margin: 0.5rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.experience-list li {
+  margin-bottom: 0.35rem;
+}
+
 .timeline-date {
   color: var(--muted);
   font-size: 0.88rem;

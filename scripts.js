@@ -30,11 +30,13 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 const skillDetails = {
-  SolidWorks: 'Sheet-metal and general modeling, motion studies, and kinematic graph analysis.',
-  AutoCAD: '2D drafting and mechanical layouts for production-ready documentation.',
-  MATLAB: 'Data analysis, script-based automation, and engineering-focused calculations.',
-  Soldering: 'Hand soldering, solder paste application, PCB oven workflows, and troubleshooting.',
-  'Product-Design': 'Part design for in-house manufacturing with practical cost and process awareness.'
+  'Creo-SolidWorks': 'CAD modeling with Creo and SolidWorks for SMT machine fixtures, production tooling, and practical mechanical design support.',
+  'SAP-Windchill': 'Engineering review process experience using SAP and Windchill to manage documentation and support controlled manufacturing changes.',
+  Printing: '3D printing experience used to optimize fixtures for SMT machine handling and accelerate hands-on manufacturing improvements.',
+  GDT: 'Drawing review experience with GD&T, supporting clearer manufacturing requirements and engineering communication.',
+  'Process-Issues': 'Systematic identification and resolution of process issues, including critical stoppages in circuit board assembly and surface mount technology constraints.',
+  'Cross-Functional': 'Communication across engineering teams, manufacturers, housing staff, law enforcement, management, and teaching teams to move issues into action.',
+  'Engineering-Leadership': 'Leadership in engineering teams through internal project ownership, Pi Tau Sigma presidency, and team-focused improvement work.'
 };
 
 function openModal(skillName) {
@@ -43,7 +45,7 @@ function openModal(skillName) {
 
   if (!modalTitle || !modalContent || !skillModal) return;
 
-  modalTitle.textContent = skillName;
+  modalTitle.textContent = skillName.replace(/-/g, ' ');
   modalContent.textContent = skillDetails[skillName] || `Information about ${skillName}.`;
 
   skillModal.classList.add('open');

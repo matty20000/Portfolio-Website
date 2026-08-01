@@ -97,6 +97,21 @@ h1 {
   color: #e3ecff;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
 main {
   max-width: 1100px;
   margin: -3rem auto 3rem;
@@ -138,6 +153,67 @@ h2 {
   transform: translateY(-1px);
 }
 
+.intro-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.stat-list {
+  display: grid;
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.stat-list li {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.stat-list strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.stat-list span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.timeline article {
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+}
+
+.timeline h3 {
+  margin: 0.1rem 0 0.35rem;
+}
+
+.timeline p {
+  margin: 0;
+}
+
+.timeline-date {
+  color: var(--muted);
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
 .grid-list {
   list-style: none;
   padding: 0;
@@ -159,6 +235,22 @@ h2 {
 
 .chip:hover {
   border-color: #bcc8dc;
+}
+
+.traits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.traits span {
+  background: #f8fbff;
+  border: 1px dashed #c7d3e7;
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.86rem;
+  padding: 0.35rem 0.7rem;
 }
 
 .project-list {
@@ -264,5 +356,100 @@ footer {
 
   .hero-content {
     margin-top: 3rem;
+  }
+
+  .intro-card {
+    grid-template-columns: 1fr;
+  }
+}
+
+.resume-page {
+  background: #dfe3ea;
+  padding: 1rem;
+}
+
+.resume-sheet {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: #f7f7f7;
+  border-radius: 0 24px 24px 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.8fr);
+  gap: 2rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+}
+
+.resume-sheet h1 {
+  color: #0d0d0d;
+  font-size: clamp(2.25rem, 5vw, 3.2rem);
+}
+
+.resume-header p {
+  font-size: 1.2rem;
+  margin: 0.25rem 0 0;
+}
+
+.resume-sheet h2 {
+  border-bottom: 1px solid #222;
+  padding-bottom: 0.35rem;
+}
+
+.resume-sheet h3,
+.resume-sheet p,
+.resume-sheet li {
+  font-size: 0.92rem;
+}
+
+.resume-entry {
+  margin-bottom: 1.25rem;
+}
+
+.resume-entry h3,
+.resume-sidebar h3 {
+  margin: 0.2rem 0 0.5rem;
+}
+
+.resume-date {
+  color: #1f2937;
+  margin-bottom: 0.2rem;
+}
+
+.resume-sheet ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1rem;
+}
+
+.resume-sheet li {
+  margin-bottom: 0.45rem;
+}
+
+.resume-sidebar {
+  background: #eeeeef;
+  border-radius: 0 24px 24px 0;
+  padding: 1rem 1.25rem;
+}
+
+.resume-summary {
+  margin-top: 0;
+}
+
+.check-list {
+  list-style: none;
+  padding-left: 0 !important;
+}
+
+.check-list li::before {
+  content: '✓';
+  margin-right: 0.75rem;
+}
+
+@media (max-width: 760px) {
+  .resume-sheet {
+    grid-template-columns: 1fr;
+  }
+
+  .resume-sidebar {
+    border-radius: 16px;
   }
 }
